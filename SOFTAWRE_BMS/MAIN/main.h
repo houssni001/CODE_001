@@ -8,9 +8,3 @@
 /* Déclaration des variables*/
 uint16_t i;
 char c='A';
-
-const char greeting[] = {
-	"\r\n************************************************"
-	"\r\n** Limatech build 0.0.1."__DATE__" "__TIME__" **"
-	"\r\n********************************************\r\n"
-};
