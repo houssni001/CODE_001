@@ -148,30 +148,6 @@ void SPI_Transmit (uint8_t *data, int size)
 	    CS_Disable();
 }
 
-/*void SPI_Receive (uint8_t *data, int size)
-{
-    // Enable SPI1 slave
-    CS_Enable();
-
-    int i = 0;
-
-    while (i < size)
-    {
-        // Wait for RXNE (Receive buffer Not Empty) bit to set -> This will indicate that the buffer is not empty
-        while (!((SPI1->SR) & (1 << 0))) {};
-
-        // Read the data from DR (Data Register)
-        data[i] = SPI1->DR;
-        i++;
-    }
-
-    // Wait for BSY (Busy flag) bit to Reset -> This will indicate that SPI is not busy in communication
-    while (((SPI1->SR) & (1 << 7))) {};
-
-    // Disable SPI slave
-    CS_Disable();
-}*/
-
 void SPI1_IRQHandler(void)
 {
 	/************************************************
